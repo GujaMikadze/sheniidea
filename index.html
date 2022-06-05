@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sheni Idea</title>
 
-    <link rel="stylesheet" href="assets/css/main.css">
-    
+    <link rel="stylesheet" href="assets/css/main.css" />
+
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css"
+    />
 
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit-icons.min.js"></script>
-</head>
-<header class="header">
+
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="module" src="assets/js/html2canvas.min.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+  <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css" />
+  <script src="jquery-ui/external/jquery/jquery.js"></script>
+  <script src="jquery-ui/jquery-ui.min.js"></script>
+  </head>
+  <header class="header">
     <!-- <div class="uk-flex container">
         <div class="header-logo">
             <a href="#">
@@ -32,135 +43,258 @@
         </nav>
     </div> -->
     <nav class="uk-navbar-container uk-margin uk-navbar" uk-navbar="">
-        <div class="uk-navbar-center">
-
-            <div class="uk-navbar-center-left"><div>
-                <ul class="uk-navbar-nav">
-                    <li class="uk-active"><a href="#">მთავარი გვერდი</a></li>
-                    <li><a href="#">დიზაინი</a></li>
-                </ul>
-            </div></div>
-
-            <a class="uk-navbar-item uk-logo" href="#">
-                <img src="/assets/images/logo.png" alt="logo" class="header-logo">
-            </a>
-
-            <div class="uk-navbar-center-right"><div>
-                <ul class="uk-navbar-nav">
-                    <li><a href="#">ჩვენს შესახებ</a></li>
-                    <li><a href="#">კონტაქტი</a></li>
-                </ul>
-            </div></div>
-
+      <div class="uk-navbar-center">
+        <div class="uk-navbar-center-left">
+          <div>
+            <ul class="uk-navbar-nav">
+              <li class="uk-active"><a href="#">მთავარი გვერდი</a></li>
+              <li><a href="#">დიზაინი</a></li>
+            </ul>
+          </div>
         </div>
+
+        <a class="uk-navbar-item uk-logo" href="#">
+          <img src="/assets/images/logo.png" alt="logo" class="header-logo" />
+        </a>
+
+        <div class="uk-navbar-center-right">
+          <div>
+            <ul class="uk-navbar-nav">
+              <li><a href="#">ჩვენს შესახებ</a></li>
+              <li><a href="#">კონტაქტი</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </nav>
-
-</header>
-<body>
+  </header>
+  <body>
     <div class="container">
-        <div class="main-content">
-            <div class="images-box">
-                <form action="">
-                    <div class="uk-flex uk-flex-between">
-                        <div class="uk-flex uk-flex-middle" id="screenshotImg">
-                            <div class="img-upload-box uk-flex uk-flex-column uk-position-relative">
-                                <img src="assets/images/tetriponi.png" alt="Shokoladi" class="image-design">
-                                <div id="display_image" class="image-placeholder"></div>
-                                <input type="file" id="image_input" accept="image/png, image/jpg, image/jpeg">
-                                <label for="image_input">სურათის ატვირთვა</label>
-                            </div>
-                            <div class="img-upload-box uk-flex uk-flex-column  uk-position-relative">
-                                <img src="assets/images/tetriponi.png" alt="Shokoladi" class="image-design">
-                                <div id="display_image2" class="image-placeholder"></div>
-                                <input type="file" id="image_input2" accept="image/png, image/jpg, image/jpeg">
-                                <label for="image_input2">სურათის ატვირთვა</label>
-                            </div>
-                            <div class="img-upload-box uk-flex uk-flex-column  uk-position-relative">
-                                <img src="assets/images/tetriponi.png" alt="Shokoladi" class="image-design">
-                                <div id="display_image3" class="image-placeholder"></div>
-                                <input type="file" id="image_input3" accept="image/png, image/jpg, image/jpeg">
-                                <label for="image_input3">სურათის ატვირთვა</label>
-                            </div>
-                            <div class="img-upload-box uk-flex uk-flex-column  uk-position-relative">
-                                <img src="assets/images/tetriponi.png" alt="Shokoladi" class="image-design">
-                                <div id="display_image4" class="image-placeholder"></div>
-                                <input type="file" id="image_input4" accept="image/png, image/jpg, image/jpeg">
-                                <label for="image_input4">სურათის ატვირთვა</label>
-                            </div>
-                            <div class="img-upload-box uk-flex uk-flex-column  uk-position-relative">
-                                <img src="assets/images/tetriponi.png" alt="Shokoladi" class="image-design">
-                                <div id="display_image5" class="image-placeholder"></div>
-                                <input type="file" id="image_input5" accept="image/png, image/jpg, image/jpeg">
-                                <label for="image_input5">სურათის ატვირთვა</label>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="choose-design uk-flex uk-flex-column">
-                                <label for="design">აირჩიეთ დიზაინი:</label>
-                                <select name="design" id="design">
-                                    <option value="" disabled selected>-- დიზაინი --</option>
-                                    <option value="design-1">დიზაინი 1</option>
-                                    <option value="design-2">დიზაინი 2</option>
-                                    <option value="design-3">დიზაინი 3</option>
-                                    <option value="design-4">დიზაინი 4</option>
-                                    <option value="design-5">დიზაინი 5</option>
-                                    <option value="design-6">დიზაინი 6</option>
-                                </select>
-                            </div>
-                            <div class="choose-text-box">
-                                <div class="choose-text-box-heading">
-                                    <h3>აირჩიეთ ტექსტი</h3>
-                                </div>
-                                <div class="uk-flex uk-flex-column">
-                                    <label for="first-choc">პირველ შოკოლადზე</label>
-                                    <input type="text" name="first-choc" id="first-choc">
-                                </div>
-                                <div class="uk-flex uk-flex-column">
-                                    <label for="second-choc">მეორე შოკოლადზე</label>
-                                    <input type="text" name="second-choc" id="second-choc">
-                                </div>
-                                <div class="uk-flex uk-flex-column">
-                                    <label for="third-choc">მესამე შოკოლადზე</label>
-                                    <input type="text" name="third-choc" id="third-choc">
-                                </div>
-                                <div class="uk-flex uk-flex-column">
-                                    <label for="fourth-choc">მეოთხე შოკოლადზე</label>
-                                    <input type="text" name="fourth-choc" id="fourth-choc">
-                                </div>
-                                <div class="uk-flex uk-flex-column">
-                                    <label for="fifth-choc">მეხუთე შოკოლადზე</label>
-                                    <input type="text" name="fifth-choc" id="fifth-choc">
-                                </div>
-                            </div>
-                        </div>
+      <canvas
+    id="myCanvas"
+    width="400"
+    height="400"
+    style="border:1px solid #000000;">
+  </canvas>
+      <div class="main-content">
+        <div class="images-box">
+          <form action="">
+            <div class="uk-flex uk-flex-between">
+              <div class="uk-flex uk-flex-middle" id="screenshotImg">
+                <div
+                  class="img-upload-box uk-flex uk-flex-column uk-position-relative"
+                >
+                  <img
+                    src="assets/images/team1212.png"
+                    alt="Shokoladi"
+                    class="image-design"
+                  />
+                  <div id="display_image" class="image-placeholder">
+                    <div class="first-drag draggable" id="drag1"></div>
+                  </div>
+                  <input
+                    type="file"
+                    id="image_input"
+                    accept="image/png, image/jpg, image/jpeg"
+                  />
+                  <label for="image_input">სურათის ატვირთვა</label>
+                </div>
+                <div
+                  class="img-upload-box uk-flex uk-flex-column uk-position-relative"
+                >
+                  <img
+                    src="assets/images/team1212.png"
+                    alt="Shokoladi"
+                    class="image-design"
+                  />
+                  <div id="display_image2" class="image-placeholder">
+                    <div class="first-drag draggable" id="drag2"></div>
+                  </div>
+                  <input
+                    type="file"
+                    id="image_input2"
+                    accept="image/png, image/jpg, image/jpeg"
+                  />
+                  <label for="image_input2">სურათის ატვირთვა</label>
+                </div>
+                <div
+                  class="img-upload-box uk-flex uk-flex-column uk-position-relative"
+                >
+                  <img
+                    src="assets/images/team1212.png"
+                    alt="Shokoladi"
+                    class="image-design"
+                  />
+                  <div id="display_image3" class="image-placeholder">
+                    <div class="first-drag draggable" id="drag3"></div>
+                  </div>
+                  <input
+                    type="file"
+                    id="image_input3"
+                    accept="image/png, image/jpg, image/jpeg"
+                  />
+                  <label for="image_input3">სურათის ატვირთვა</label>
+                </div>
+                <div
+                  class="img-upload-box uk-flex uk-flex-column uk-position-relative"
+                >
+                  <img
+                    src="assets/images/team1212.png"
+                    alt="Shokoladi"
+                    class="image-design"
+                  />
+                  <div id="display_image4" class="image-placeholder">
+                    <div class="first-drag draggable" id="drag4"></div>
+                  </div>
+                  <input
+                    type="file"
+                    id="image_input4"
+                    accept="image/png, image/jpg, image/jpeg"
+                  />
+                  <label for="image_input4">სურათის ატვირთვა</label>
+                </div>
+                <div
+                  class="img-upload-box uk-flex uk-flex-column uk-position-relative"
+                >
+                  <img
+                    src="assets/images/team1212.png"
+                    alt="Shokoladi"
+                    class="image-design"
+                  />
+                  <div id="display_image5" class="image-placeholder">
+                    <div class="first-drag draggable" id="drag5"></div>
+                  </div>
+                  <input
+                    type="file"
+                    id="image_input5"
+                    accept="image/png, image/jpg, image/jpeg"
+                  />
+                  <label for="image_input5">სურათის ატვირთვა</label>
+                </div>
+              </div>
+              <div>
+                <div class="choose-design uk-flex uk-flex-column">
+                  <label for="design">აირჩიეთ დიზაინი:</label>
+                  <select name="design" id="design">
+                    <option value="" disabled selected>-- დიზაინი --</option>
+                    <option value="design-1">დიზაინი 1</option>
+                    <option value="design-2">დიზაინი 2</option>
+                    <option value="design-3">დიზაინი 3</option>
+                    <option value="design-4">დიზაინი 4</option>
+                    <option value="design-5">დიზაინი 5</option>
+                    <option value="design-6">დიზაინი 6</option>
+                  </select>
+                </div>
+                <div class="choose-text-box">
+                  <div class="choose-text-box-heading">
+                    <h3>აირჩიეთ ტექსტი</h3>
+                  </div>
+                  <div class="uk-flex uk-flex-column">
+                    <label for="first-choc">პირველ შოკოლადზე</label>
+                    <div>
+                      <input type="text" name="first-choc" id="first-choc" />
+                      <div class="uk-flex">
+                        <input
+                          type="number"
+                          id="fontSize1"
+                          name="fontSize1"
+                          min="10"
+                          max="26"
+                          value="16"
+                        />
+                        <input type="color" id="colorpicker" value="#000000" />
+                      </div>
                     </div>
-                    <!-- <input type="submit" value="შეკვეთა" id="submitForm"> -->
-                    <!-- This is an anchor toggling the modal -->
-                    <a href="#modal-example" id="submitForm" uk-toggle>შეკვეთა</a>
-
-                    <!-- This is the modal -->
-                    <div id="modal-example" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <div id="modalBody">
-
-                            </div>
-                            <div class="send-email-box">
-                                <a href = "mailto: abc@example.com">Send Email</a>
-                            </div>
-                        </div>
+                  </div>
+                  <div class="uk-flex uk-flex-column">
+                    <label for="second-choc">მეორე შოკოლადზე</label>
+                    <div>
+                      <input type="text" name="second-choc" id="second-choc" />
+                      <div class="uk-flex">
+                        <input
+                          type="number"
+                          id="fontSize2"
+                          name="fontSize2"
+                          min="10"
+                          max="26"
+                          value="16"
+                        />
+                        <input type="color" id="colorpicker2" value="#000000" />
+                      </div>
                     </div>
-                </form>
-                
+                  </div>
+                  <div class="uk-flex uk-flex-column">
+                    <label for="third-choc">მესამე შოკოლადზე</label>
+                    <div>
+                      <input type="text" name="third-choc" id="third-choc" />
+                      <div class="uk-flex">
+                        <input
+                          type="number"
+                          id="fontSize3"
+                          name="fontSize3"
+                          min="10"
+                          max="26"
+                          value="16"
+                        />
+                        <input type="color" id="colorpicker3" value="#000000" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="uk-flex uk-flex-column">
+                    <label for="fourth-choc">მეოთხე შოკოლადზე</label>
+                    <div>
+                      <input type="text" name="fourth-choc" id="fourth-choc" />
+                      <div class="uk-flex">
+                        <input
+                          type="number"
+                          id="fontSize4"
+                          name="fontSize4"
+                          min="10"
+                          max="26"
+                          value="16"
+                        />
+                        <input type="color" id="colorpicker4" value="#000000" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="uk-flex uk-flex-column">
+                    <label for="fifth-choc">მეხუთე შოკოლადზე</label>
+                    <div>
+                      <input type="text" name="fifth-choc" id="fifth-choc" />
+                      <div class="uk-flex">
+                        <div class="uk-flex">
+                          <input
+                            type="number"
+                            id="fontSize5"
+                            name="fontSize5"
+                            min="10"
+                            max="26"
+                            value="16"
+                          />
+                          <input type="color" id="colorpicker5" value="#000000" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- <input type="submit" value="შეკვეთა" id="submitForm"> -->
+            <!-- This is an anchor toggling the modal -->
+            <a href="#modal-example" id="submitForm" uk-toggle>შეკვეთა</a>
+
+            <!-- This is the modal -->
+            <div id="modal-example" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <div id="modalBody"></div>
+                <div class="send-email-box">
+                  <a href="mailto: abc@example.com">Send Email</a>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
-</body>
-
-<script>
-
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="module" src="assets/js/html2canvas.min.js"></script>
-<script type="module" src="assets/js/main.js"></script>
-<!-- <img src="assets/images/მონახაზი (1).png" alt="monaxazi"> -->
+  </body>
 </html>
