@@ -5,9 +5,10 @@ $(document).ready(function () {
       var reader = new FileReader();
       reader.addEventListener("load", () => {
         var uploaded_image = reader.result;
+        console.log(uploaded_image);
         document.querySelector(
           elem
-        ).style.backgroundImage = `url(${uploaded_image})`;
+        ).style.backgroundImage = `url(assets/images/111.jpg)`;
       });
       reader.readAsDataURL(this.files[0]);
     });
@@ -34,11 +35,15 @@ $(document).ready(function () {
       $("#display_image5").css("background-image", src5);
 
       // Choc-1 text
-      $("#drag1").html("pirveli");
-      $("#drag1").css("color", "red");
-      $("#drag1").css("left", "34px");
-      $("#drag1").css("right", "33px");
-      $("#drag1").css("top", "33px");
+      $("#drag1").append("<div class='draggable' style='left:16%; top: 0%; display:block; width:fit-content;'>pirveli</div>");
+      $("#drag1 > div").css("color", "red");
+      $("#drag1 > div").css("left", "34px");
+      $("#drag1 > div").css("right", "33px");
+      $("#drag1 > div").css("top", "33px");
+
+      $(".draggable").draggable({
+        containment: "parent",
+      });
     } else if ($(this).prop("value") === "design-2") {
       var src1 = 'url("assets/images/111.jpg")';
       $("#display_image").css("background-image", src1);
@@ -59,20 +64,60 @@ $(document).ready(function () {
   });
 
   // Text Add
-  $("#first-choc").on("keyup", function () {
-    $("#drag1").html($(this).val());
+  // $("#first-choc").on("keyup", function () {
+  //   $("#drag1").html($(this).val());
+  // });
+  // $("#second-choc").on("keyup", function () {
+  //   $("#drag2").html($(this).val());
+  // });
+  // $("#third-choc").on("keyup", function () {
+  //   $("#drag3").html($(this).val());
+  // });
+  // $("#fourth-choc").on("keyup", function () {
+  //   $("#drag4").html($(this).val());
+  // });
+  // $("#fifth-choc").on("keyup", function () {
+  //   $("#drag5").html($(this).val());
+  // });
+  $("#plus1").click(function (e) { 
+    e.preventDefault();
+    let text = $("#first-choc").val();
+    $("#drag1").append("<div class='draggable' style='left:16%; top: 0%; display:block; width:fit-content;'>" + text + "</div>");
+    $(".draggable").draggable({
+      containment: "parent",
+    });
   });
-  $("#second-choc").on("keyup", function () {
-    $("#drag2").html($(this).val());
+  $("#plus2").click(function (e) { 
+    e.preventDefault();
+    let text = $("#second-choc").val();
+    $("#drag2").append("<div class='draggable' style='left:16%; top: 0%; display:block; width:fit-content;'>" + text + "</div>");
+    $(".draggable").draggable({
+      containment: "parent",
+    });
   });
-  $("#third-choc").on("keyup", function () {
-    $("#drag3").html($(this).val());
+  $("#plus3").click(function (e) { 
+    e.preventDefault();
+    let text = $("#third-choc").val();
+    $("#drag3").append("<div class='draggable' style='left:16%; top: 0%; display:block; width:fit-content;'>" + text + "</div>");
+    $(".draggable").draggable({
+      containment: "parent",
+    });
   });
-  $("#fourth-choc").on("keyup", function () {
-    $("#drag4").html($(this).val());
+  $("#plus4").click(function (e) { 
+    e.preventDefault();
+    let text = $("#fourth-choc").val();
+    $("#drag4").append("<div class='draggable' style='left:16%; top: 0%; display:block; width:fit-content;'>" + text + "</div>");
+    $(".draggable").draggable({
+      containment: "parent",
+    });
   });
-  $("#fifth-choc").on("keyup", function () {
-    $("#drag5").html($(this).val());
+  $("#plus5").click(function (e) { 
+    e.preventDefault();
+    let text = $("#fifth-choc").val();
+    $("#drag5").append("<div class='draggable' style='left:16%; top: 0%; display:block; width:fit-content;'>" + text + "</div>");
+    $(".draggable").draggable({
+      containment: "parent",
+    });
   });
 
   //Text color
@@ -356,18 +401,4 @@ $(document).ready(function () {
       _mouseDestroy.call(self);
     };
   });
-
-  function run() {
-    let canvas = new fabric.Canvas('myCanvas');
-    let rect = new fabric.Rect({
-      left: 100,
-      top: 100,
-      fill: 'red',
-      width: 20,
-      height: 20
-    });
-    canvas.add(rect);
-  }
-  
-  run();
 });

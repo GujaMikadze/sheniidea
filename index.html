@@ -20,28 +20,12 @@
 
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="module" src="assets/js/html2canvas.min.js"></script>
   <script type="module" src="assets/js/main.js"></script>
   <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css" />
   <script src="jquery-ui/external/jquery/jquery.js"></script>
   <script src="jquery-ui/jquery-ui.min.js"></script>
   </head>
-  <header class="header">
-    <!-- <div class="uk-flex container">
-        <div class="header-logo">
-            <a href="#">
-                <img src="/assets/images/logo.png" alt="logo">
-            </a>
-        </div>
-        <nav class="uk-flex uk-flex-center">
-            <ul class="uk-flex header-nav">
-                <li class="header-nav-li"><a href="#">მთავარი გვერდი</a></li>
-                <li class="header-nav-li"><a href="#">დიზაინი</a></li>
-                <li class="header-nav-li"><a href="#">ჩვენს შესახებ</a></li>
-                <li class="header-nav-li"><a href="#">კონტაქტი</a></li>
-            </ul>
-        </nav>
-    </div> -->
+  <!-- <header class="header">
     <nav class="uk-navbar-container uk-margin uk-navbar" uk-navbar="">
       <div class="uk-navbar-center">
         <div class="uk-navbar-center-left">
@@ -67,20 +51,14 @@
         </div>
       </div>
     </nav>
-  </header>
+  </header> -->
   <body>
     <div class="container">
-      <canvas
-    id="myCanvas"
-    width="400"
-    height="400"
-    style="border:1px solid #000000;">
-  </canvas>
       <div class="main-content">
         <div class="images-box">
           <form action="">
-            <div class="uk-flex uk-flex-between">
-              <div class="uk-flex uk-flex-middle" id="screenshotImg">
+            <div class="uk-flex uk-flex-center uk-flex-wrap uk-flex-middle">
+              <div class="uk-flex uk-flex-middle uk-flex-wrap uk-flex-center" id="screenshotImg">
                 <div
                   class="img-upload-box uk-flex uk-flex-column uk-position-relative"
                 >
@@ -90,7 +68,7 @@
                     class="image-design"
                   />
                   <div id="display_image" class="image-placeholder">
-                    <div class="first-drag draggable" id="drag1"></div>
+                    <div class="first-drag" id="drag1"></div>
                   </div>
                   <input
                     type="file"
@@ -108,7 +86,7 @@
                     class="image-design"
                   />
                   <div id="display_image2" class="image-placeholder">
-                    <div class="first-drag draggable" id="drag2"></div>
+                    <div class="first-drag" id="drag2"></div>
                   </div>
                   <input
                     type="file"
@@ -126,7 +104,7 @@
                     class="image-design"
                   />
                   <div id="display_image3" class="image-placeholder">
-                    <div class="first-drag draggable" id="drag3"></div>
+                    <div class="first-drag" id="drag3"></div>
                   </div>
                   <input
                     type="file"
@@ -144,7 +122,7 @@
                     class="image-design"
                   />
                   <div id="display_image4" class="image-placeholder">
-                    <div class="first-drag draggable" id="drag4"></div>
+                    <div class="first-drag" id="drag4"></div>
                   </div>
                   <input
                     type="file"
@@ -162,7 +140,7 @@
                     class="image-design"
                   />
                   <div id="display_image5" class="image-placeholder">
-                    <div class="first-drag draggable" id="drag5"></div>
+                    <div class="first-drag" id="drag5"></div>
                   </div>
                   <input
                     type="file"
@@ -193,6 +171,7 @@
                     <label for="first-choc">პირველ შოკოლადზე</label>
                     <div>
                       <input type="text" name="first-choc" id="first-choc" />
+                      <button id="plus1">+</button>
                       <div class="uk-flex">
                         <input
                           type="number"
@@ -210,6 +189,7 @@
                     <label for="second-choc">მეორე შოკოლადზე</label>
                     <div>
                       <input type="text" name="second-choc" id="second-choc" />
+                      <button id="plus2">+</button>
                       <div class="uk-flex">
                         <input
                           type="number"
@@ -227,6 +207,7 @@
                     <label for="third-choc">მესამე შოკოლადზე</label>
                     <div>
                       <input type="text" name="third-choc" id="third-choc" />
+                      <button id="plus3">+</button>
                       <div class="uk-flex">
                         <input
                           type="number"
@@ -244,6 +225,7 @@
                     <label for="fourth-choc">მეოთხე შოკოლადზე</label>
                     <div>
                       <input type="text" name="fourth-choc" id="fourth-choc" />
+                      <button id="plus4">+</button>
                       <div class="uk-flex">
                         <input
                           type="number"
@@ -261,6 +243,7 @@
                     <label for="fifth-choc">მეხუთე შოკოლადზე</label>
                     <div>
                       <input type="text" name="fifth-choc" id="fifth-choc" />
+                      <button id="plus5">+</button>
                       <div class="uk-flex">
                         <div class="uk-flex">
                           <input

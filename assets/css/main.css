@@ -1,3 +1,7 @@
+html {
+  margin: 0;
+  padding: 0;
+}
 .header {
   background-color: rgb(102, 210, 224);
 }
@@ -47,6 +51,7 @@ nav {
 
 .img-upload-box {
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 label {
@@ -68,6 +73,10 @@ input[type="file"] {
   left: 5%;
 }
 
+.choose-design {
+  align-self: center;
+}
+
 .choose-text-box {
   margin-top: 20px;
   border: 1px solid #000;
@@ -79,6 +88,6 @@ input[type="file"] {
 }
 
 .first-drag {
-  left: 16%;
-  top: 38%;
+  width: 126px;
+  height: 126px;
 }
