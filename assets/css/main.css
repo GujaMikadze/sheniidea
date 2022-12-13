@@ -6,6 +6,17 @@ html {
   background-color: rgb(102, 210, 224);
 }
 
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.header-logo {
+  width: 60px;
+  height: 60px;
+}
+
 nav {
   width: 100%;
 }
